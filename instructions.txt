@@ -1,0 +1,18 @@
+Make sure to open docker and run this in docker terminal:
+
+docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management
+
+Then do this:
+
+1. run post-service
+- node index.js
+
+2. run client
+- npm start
+
+3. run be_post_pub
+- node publisher.js
+
+4. run be_post_persistor
+- node subscriber.js
+
